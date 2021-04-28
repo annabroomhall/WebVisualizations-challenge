@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<title>Weather-Py</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+    body {
+  margin: 0; 
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.carousel-inner img {  margin: auto;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+</style>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index_landing.html">Weather-Py</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="index_temp.html">Temperature</a></li>
+            <li><a href="index_humidity.html">Humidity</a></li>
+            <li><a href="index_cloudiness.html">Cloudiness</a></li>
+            <li><a href="index_windspeed.html">Windspeed</a></li>
+          </ul>
+        </li>
+        <li><a href="index_comparisons.html">Comparisons</a></li>
+        <li><a href="index_data.html">Data</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar grey" style="width:20%; right:0; text-align: center;">
+  <!--<h2 class="sidebar_head">Visualisations</h3>-->
+  <a href="index_temp.html"><img src="visualisations/Latitude v Temperature_updated.png" alt="Temperature" width="80%"></a>
+  <a href="index_humidity.html"><img src="visualisations/Latitude v Humidity_updated.png" alt="Humidity" width="80%"></a>
+  <a href="index_cloudiness.html"><img src="visualisations/Latitude v Cloudiness_updated.png" alt="Cloudiness" width="80%"></a>
+  <a href="index_windspeed.html"><img src="visualisations/Latitude v Wind Speed_updated.png" alt="Wind Speed" width="80%"></a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-right:25%; text-align: justify">
+
+<!-- Set up container and rows -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-11">
+        <!-- Actual Page Text -->
+        <h1 class="h1">Weather Investigation</h1>
+        <h1 class="h3">How does Latitude affect the Weather?</h1>
+        <h5 class="h5">We were tasked with reviewing if certain weather elements are impacted by how close a city is to the equator.  </p>
+
+        <h5 class="h5">To gather the data for the analysis, I first randomly generated a list of 1000 coordinates.  Using these coordinates, I used the CityPy API to find the closest city to ensure that the coordinates reflected a populated area.</p>
+        <h5 class="h5">Using the OpenWeatherAPI, I assembled a dataset reviewing most* of these cities focussing on 4 key weather elements.  The elements reviewed were: </p>
+        <ul>
+          <li class="para">Temperature</li>
+          <li class="para">Humidity</li>
+          <li class="para">Cloudiness</li>
+          <li class="para">Wind Speed</li>
+        </ul>
+        <h5 class="h5">Use the dropdown menu or the shortcut links in the sidebar to find out more on the results of this exciting analysis</p>
+        <p></p>
+        <p></p>
+        <h5 class="h5"><em>*A number of cities were excluded from the database as no weather data was available.  The final dataset contained 929 cities. </p></em>
+  
+    <!-- Set up carousel to slide through the images -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="visualisations/Latitude v Temperature_updated.png" alt="Temperature" style="width:40%; align-items: center;">
+      </div>
+      <div class="item">
+        <img src="visualisations/Latitude v Humidity_updated.png" alt="Humidity" style="width:40%; align-items: center;">
+      </div>
+      <div class="item">
+        <img src="visualisations/Latitude v Cloudiness_updated.png" alt="Cloudiness" style="width:40%; align-items: center">
+      </div>
+      <div class="item">
+        <img src="visualisations/Latitude v Wind Speed_updated.png" alt="Wind Speed" style="width:40%; align-items: center">
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>  
+</div>
+</body>
+</html>
