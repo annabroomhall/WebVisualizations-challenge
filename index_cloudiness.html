@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<title>Cloudiness</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+    body {
+  margin: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+</style>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index_landing.html">WeatherPy</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="index_temp.html">Temperature</a></li>
+            <li><a href="index_humidity.html">Humidity</a></li>
+            <li class="active"><a href="index_cloudiness.html">Cloudiness</a></li>
+            <li><a href="index_windspeed.html">Windspeed</a></li>
+          </ul>
+        </li>
+        <li><a href="index_comparisons.html">Comparisons</a></li>
+        <li><a href="index_data.html">Data</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Set up container and row for page image and data -->
+  <div class="container">
+    <div class="row">  
+      <div class="col-md-10">
+          <h1 style='text-align: center; color: #4BACC6;'  class="h1">Latitude vs Cloudiness </h1>
+          <h5 class="h5" style='text-align: center;'><img src="visualisations/Latitude v Cloudiness_updated.png" alt="Cloudiness" width="40%"></a></p>
+          <h5 class="h5" style='text-align: center;'>The third weather element inspected centred around cloudiness.</p>        
+          <h5 class="h5" style='text-align: center;'>Much like humidity, the latitude of a city appears to have no impact on cloudiness.</p>        
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
